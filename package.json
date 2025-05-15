@@ -7,7 +7,7 @@
     "frontend": "ng serve --port 4200",
     "json": "json-server --watch server/db.json --port 3001",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "concurrently \"npm run json\" \"npm run frontend\" --kill-others-on-fail",
     "test": "ng test"
   },
   "private": true,
