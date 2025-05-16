@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"npm run json\" \"npm run frontend\"",
-    "frontend": "ng serve --port 4200",
+    "start": "concurrently \"npm run json\" \"npm run serve\"",
+    "serve": "serve -s dist/trabajofinal-avancep -l 4200",
     "json": "json-server --watch server/db.json --port 3001",
     "build": "ng build",
-    "watch": "concurrently \"npm run json\" \"npm run frontend\" --kill-others-on-fail",
+    "watch": "concurrently \"npm run json\" \"npm run serve\" --kill-others-on-fail",
     "test": "ng test"
   },
   "private": true,
