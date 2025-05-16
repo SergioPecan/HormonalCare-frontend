@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"npm run serve\" \"npm run json\" ",
-    "serve": "serve -s dist/trabajofinal-avancep -l 3001 ",
+    "serve": "serve -s dist/trabajofinal-avancep/browser -l 3001 ",
     "json": "json-server --watch server/db.json --port 4200 ",
     "build": "ng build",
     "watch": "concurrently \"npm run json\" \"npm run serve\" --kill-others-on-fail",
